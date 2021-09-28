@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+hr{
+    border: none;
+    height: 1.8px;
+    background: #dddddd;
+}
+div{
+    /* border: 0.5px solid red; */
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    margin-bottom: 10px;
+}
+.headerBox{
+    height: 100%;
+}
+
+.upperHalfInNav, .lowerHalfInNav{
+    height: 50%;
+    background-color: white;
+    display: flex;
+}
+.lowerHalfInNav{
+    height: 40%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* border-bottom: 2px solid #c2c2c2; */
+}
+
+.lowerHalfItems, .upperHalfItems{
+    display: flex;
+}
+
+.upperHalfItems{
+    width: 93%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 80%; 
+    /* border: 2px solid blue; */
+}
+.firDivUpperHalf, .secDivUpperHalf, #headerMainLogo{
+    width: 20%;
+    display: flex;
+    gap: 10%;
+}
+.btn-icons{
+    flex-basis: 8%;
+    border: none;
+    background-color: white;
+}
+.smallIcons{
+    max-width: 100%;
+    cursor: pointer;
+}
+#headerMainLogo{
+    height: 50%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.secDivUpperHalf{
+    justify-content: end;
+}
+
+.lowerHalfItems{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    color: #534848;
+    font-size: 100%;
+    align-items: center;
+}
+
+#saleRedirector{
+    color: red;
+}
+
+.pagesRedirector:hover{
+    color: green;
+    cursor: pointer;
+    display: visible;
+}
+
+.dropdown-holder{
+   display: block;
+}
+
+.dropdownContent{
+    display: block;
+    background-color: #c2c2c2;
+    display: visible;
+}

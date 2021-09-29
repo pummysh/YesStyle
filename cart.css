@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F1F2F6;
+}
+
+hr{
+    border: none;
+    height: 1.8px;
+    background: #dddddd;
+}
+div{
+    /* border: 0.5px solid red; */
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    position: initial;
+    display: block;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.headerBox{
+    height: 100%;
+}
+
+.upperHalfInNav, .lowerHalfInNav{
+    height: 50%;
+    background-color: white;
+    display: flex;
+}
+.lowerHalfInNav{
+    height: 40%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* border-bottom: 2px solid #c2c2c2; */
+    padding-bottom: 1%;
+}
+
+.lowerHalfItems, .upperHalfItems{
+    display: flex;
+}
+
+.upperHalfItems{
+    width: 93%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 80%; 
+    /* border: 2px solid blue; */
+}
+.firDivUpperHalf, .secDivUpperHalf, #headerMainLogo{
+    width: 20%;
+    display: flex;
+    gap: 10%;
+}
+.btn-icons{
+    flex-basis: 8%;
+    border: none;
+    background-color: white;
+}
+.smallIcons{
+    max-width: 100%;
+    cursor: pointer;
+}
+#headerMainLogo{
+    height: 50%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.secDivUpperHalf{
+    justify-content: end;
+}
+
+.lowerHalfItems{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    color: #534848;
+    font-size: 100%;
+    align-items: center;
+}
+
+#saleRedirector{
+    color: red;
+}
+
+.pagesRedirector:hover{
+    color: green;
+    cursor: pointer;
+    display: visible;
+}
+
+.dropdown-holder{
+   display: block;
+}
+ 
+.dropdownContent{
+    display: block;
+    background-color: #c2c2c2;
+    display: visible;
+}
+
+.main-cont{
+    width: 80%;
+    height: 150vh;
+    margin: auto;
+}
+
+.firstDiv{
+    height: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#txtShoppingBag{
+    font-size: 23px;
+    vertical-align: middle;
+}
+
+#paraTxtRegister{
+    color: #7B6666;
+    background-color: #E8E8E8;
+    font-weight: bold;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+#covidResponseBtn{
+   justify-content: end;
+   display: inline;
+   border: none;
+    font-size: 15px;
+    cursor: pointer;
+    /* text-align: initial; */
+    background-color: white;
+    border-radius: 20px;
+    color: rgb(100, 95, 95);
+    padding: 8px;
+}
+#covidResponseBtn > img{
+    max-width: 15px;
+}
+
+.secondDiv{
+    min-height: 10%;
+    background-color: white;
+}
+
+.thirdDiv{
+    height: 35%;
+    margin-top: 2.5%;
+    background-color: white;
+}
+
+.fourthDiv{
+    height: 55%;
+    margin-top: 2.5%;
+    background-color: white;
+}
+
+.content{
+    margin: 1%;
+    height: 90%;
+}
+
+.boxHeadings{
+    font-size: 20px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+
+.productsHolder{
+    height: 90%;
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: repeat(6,15.44%);
+    grid-gap: 1.5%;
+    cursor: pointer;
+}
+
+.defaultButton{
+    background-color: #4CAF50;
+    padding: 10px;
+    margin-top: 1%;
+    width: 16%;
+    font-size: 100%;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 6px;
+}
+.content{
+    box-sizing: border-box;
+}
+
+/* #defaultParaInCart{
+    
+} */
+
+#btnMoreFlashSales{
+    color: #ffffff;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    height: 50%;
+    border-radius: 8px;
+    justify-content: center;
+    margin: auto;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+#btnMoreFlashSales:hover{
+    background-color: #4CAF50;
+    border: none;
+}
+
+.shopAndRegisterText{
+    display: flex;
+    align-items: center;
+}
+
+.productsHolder > div img{
+    max-width: 100%;
+}
+
+.text-grey{
+    color: rgb(100, 95, 95);
+}

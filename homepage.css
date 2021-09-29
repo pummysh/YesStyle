@@ -2,19 +2,25 @@
     margin: 0;
     padding: 0;
 }
+.back-white{
+    background-color: white;
+}
+body{
+    background-color: #F1F2F6;
+}
 hr{
     border: none;
     height: 1.8px;
     background: #dddddd;
 }
 div{
-    /* border: 0.5px solid red; */
+    border: 0.5px solid red;
 }
 
 header{
     height: 100px;
     width: 100%;
-    position: fixed;
+    position: initial;
     margin-bottom: 10px;
 }
 .headerBox{
@@ -31,7 +37,7 @@ header{
     background-color: white;
     display: flex;
     justify-content: center;
-    /* border-bottom: 2px solid #c2c2c2; */
+    padding-bottom: 1%;
 }
 
 .lowerHalfItems, .upperHalfItems{
@@ -98,3 +104,22 @@ header{
     background-color: #c2c2c2;
     display: visible;
 }
+
+.main-cont{
+    width: 80%;
+    height: 500vh;
+    margin: auto;
+}
+
+.firstDiv{
+    height: 1.2%;
+    display: flex;
+    justify-content: space-around;
+}
+.firstDiv button{
+    flex-grow: 30%;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.firstDiv > button:nth-child(1)

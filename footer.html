@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            /* position: absolute; */
+            width: 100%;
+            height: 1200px;
+            font-family: Lato, Helvetica, Arial, tahoma, "Hiragino Maru Gothic Pro", "ＭＳ Ｐゴシック", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+            font-size: 14px;
+            box-sizing: border-box;
+            
+        }
+        
+        #footer {
+            /* position: relative; */
+            /* bottom: 0%; */
+            height: 300px;
+            width: 100%;
+            display: grid;
+            background-color: rgb(186, 207, 247);
+            grid-template-columns: 90%;
+            grid-template-rows: 60% 30%;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .info_social {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 100%;
+            justify-content: center;
+            
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            grid-template-rows: 90%;
+            gap: 2%;
+            /* justify-content: center; */
+        }
+
+        .socialconnects {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 50% 50%;
+            
+        }
+
+        ul {
+            list-style: none;
+            gap: 20px;
+            padding-inline-start: 0px;
+
+        }
+
+        li {
+            margin: 10px 10px 10px 0px;
+        }
+
+        .social_media_icons img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* universal styling  */
+
+        .new_anouncement {
+            color: rgb(53, 153, 14);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .gap_lang {
+            margin: 4px;
+        }
+
+        .line {
+            background-color: black;
+            width: 2px;
+            height: 10px;
+            align-items: center;
+            display: inline-block;
+            margin: 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="footer">
+            <div class="info_social">
+                <div class="info">
+                    <div class="box-1">
+                        <strong>ENQUIRY</strong>
+                        <ul>
+                            <li>Customer Services</li>
+                            <li>Order Tracking</li>
+                            <li>Contact Us</li>
+
+                        </ul>
+                    </div>
+                    <div class="box-2">
+                        <strong>ABOUT YESSTYLE</strong>
+                        <ul>
+                            <li>About Us</li>
+                            <li>Email Our CEO <span class="new_anouncement">NEW</span></li>
+                            <li>Friends Rewards</li>
+                            <li>YesStyle Influencer <span class="new_anouncement">NEW</span></li>
+                        </ul>
+                    </div>
+                    <div class="box-3">
+                        <strong>INFORMATION</strong>
+                        <ul>
+                            <li>Special Offer</li>
+                            <li>Affiliate Program</li>
+                            <li>Wholesale</li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="socialconnects">
+                    <div class="yesstyleapp">
+                        <strong>THE YESSTYLE APP</strong>
+                        <img src="https://ddvql06zg3s2o.cloudfront.net/Assets/res/p/2909/imgs/appintro/app-badge_en.svg"
+                            alt="link-to-playstore" style="margin: 10px 10px 0px 0px;" />
+                    </div>
+                    <div class="social_media">
+                        <strong>FOLLOW YESSTYLE ON</strong>
+                        <div class="social_media_icons" style="margin: 10px 10px 0px 0px;">
+                            <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="facebook" />
+                            <img src="https://img.icons8.com/color/48/000000/twitter-circled--v1.png" alt="twitter" />
+                            <img src="https://img.icons8.com/color/48/000000/pinterest.png" alt="pinterest" />
+                            <img src="https://img.icons8.com/ios-glyphs/50/000000/instagram-new.png" alt="instagram" />
+                            <img src="icons_gif/icons8-youtube-64.png" alt="youtube" style="width: 45px; height: 45;" />
+                            <img src="https://img.icons8.com/ios-filled/50/000000/tumblr--v2.png" alt="tumblr" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="privacy_copyright">
+                <div class="lang_privacy">
+                    <div class="language"><span class="gap_lang">English</span><span
+                            class="gap_lang">Français</span><span class="gap_lang">Deutsch</span><span
+                            class="gap_lang">Español</span><span class="gap_lang">Italiano</span><span
+                            class="gap_lang">日本語</span>
+                        <div class="line"></div><span class="gap_lang">Terms of Use</span><span class="gap_lang">Privacy
+                            Policy</span><span class="gap_lang">Cookie
+                            Preferences</span>
+                    </div>
+                </div>
+                <p style="margin: 2px;">
+                    Copyright © 2006-2021 YESSTYLE.COM LTD. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -78,7 +78,7 @@ body{
     border-width: 2px;
 }
 #right{
-    height: 775px;
+    height: 850px;
     background-color: white;
     padding: 8px;
 }
@@ -217,6 +217,7 @@ text-align: center;
     grid-template-rows: 25% 25% 25%;
     grid-gap: 18%;
     margin-bottom: 5%;
+    height: 100px;
 }
 .txtcenter{
     text-align: center;
@@ -256,4 +257,20 @@ text-align: center;
     color: #666;
     font-weight: normal;
 }
+input{
+    margin-right: 5px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid brown;
+    /* background-color: white;
+    color: grey; */
+}
+#submit{
+    height: 33px;
+    padding: 5px;
+}
+#ip1{
+    width: 65%;
+}
+
 

@@ -160,7 +160,7 @@ header{
 }
 
 .fourthDiv{
-    height: 55%;
+    height: 500px;
     margin-top: 2.5%;
     background-color: white;
 }
@@ -198,19 +198,30 @@ header{
     border-radius: 6px;
 }
 .content{
-    box-sizing: border-box;
+    height: auto;
 }
 
+
+#cartContent{
+    display: grid;
+    grid-template-columns: 71% 28%;
+    grid-gap: 1%;
+    height: auto;
+
+}
 /* #defaultParaInCart{
     
 } */
 
 #btnMoreFlashSales{
     color: #ffffff;
-    background-color: black;
-    width: 100%;
+    background-color: #333333;
+    width: 12%;
+    position: relative;
+    left: 45%;
     text-align: center;
-    height: 50%;
+    height: 100%;
+    margin-top: 20px;
     border-radius: 8px;
     justify-content: center;
     margin: auto;
@@ -230,8 +241,159 @@ header{
 
 .productsHolder > div img{
     max-width: 100%;
+    border-inline-start: black;
 }
 
 .text-grey{
     color: rgb(100, 95, 95);
+}
+
+#btnHolderatLast{
+    margin-top: 5%;
+    height: 50px;
+}
+
+/* work related to showing cart data */
+
+
+.cartItemsData{
+    height: auto;
+    margin: 1.5% 0 0 1.5%;
+}
+
+.cartItemsData hr{
+    margin-top: 15px;
+}
+
+.checkOutBox{
+    /* height: will define */
+    height: 620px;
+    background: linear-gradient(to bottom right, #66CA59,#45D27D);
+}
+
+#cartDataHead{
+    min-height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    align-items: center;
+    color: #4d4444;
+    text-align: start;
+    height: auto;
+}
+
+.cartItemsData > div{
+    color: #545854;
+}
+
+.itemsInCartItemsData{
+    margin: 2% 0 2% 0;
+    display: flex;
+    height: 150px;
+}
+
+.itemsInCartItemsData h1{
+    font-size: 20px;
+    color: black;
+}
+
+.imgInCartItemsData{
+    max-width: 100%;
+    max-height: 100%;
+    display: inline;
+}
+
+.imagesDivCartData{
+    max-width: 16%;
+    max-height: 100%;
+    display: inline;
+}
+
+.textDivCartData{
+    max-width: 40%;
+    margin-left: 2%;
+}
+
+#quantityTxt{
+    margin-top: 10px;
+}
+.whiteContInCheckout{
+    height: 88%;
+    margin: 1% 1% 1% 1%;
+    background-color: white;
+}
+
+.checkoutTxt{
+    color: white;
+    font-weight: lighter;
+    font-size: 25px;
+    margin: 5%;
+}
+
+.firstDivInWhiteBox{
+    height: 30%;
+}
+
+.secondDivInWhiteBox{
+    height: 20%;
+    background-color: #F1F2F6;
+}
+.thirdDivInWhiteBox{
+    height: 50%;
+}
+
+.headingsInFirstDivInCheckout{
+    margin: 5% 5% 0 2.5%;
+    font-size: 18px;
+}
+
+.marginLeftDouble{
+    display: flex;
+    gap: 4%;
+    margin-left: 10%;
+    margin-bottom: 2.5%;
+}
+
+
+
+.couponOrRewardsInput{
+    width: 90%;
+    height: 40%;
+}
+
+.summaryFlexes{
+    display: flex;
+    margin: 2.5%;
+    justify-content: space-between;
+}
+
+.btnCheckout{
+    background-color: #4CAF50;
+    color: white;
+    width: 96%;
+    margin: 5% 2% 2% 2%;
+    height: 15%;
+    border: none;
+    font-size: 17px;
+}
+
+.productsHolder p{
+    margin: 4% 0 4% 0;
+}
+
+.content > h1{
+    font-size: 30px;
+    margin: 3% 0 3% 0;
+}
+
+.whiteContInCheckout h4{
+    color: #4D4444;
+}
+
+.btnRemoveCartItem{
+    padding: 1% 2% 1% 2%;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-weight: bold;
 }

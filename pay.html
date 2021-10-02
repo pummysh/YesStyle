@@ -13,9 +13,9 @@
         #signInBox{
             width: 30%;
             margin: auto;
-            height: 500px;
-            border-radius: 5px;
-            box-shadow: 1px 1px 5px 5px rgb(226, 223, 223);
+            height: auto;
+            border: 2px solid #4caf50;
+            box-sizing: border-box;
         }
         #headerMainLogo
         {
@@ -31,9 +31,11 @@
             width: 100%;
             margin: auto;
             background-color: #4caf50;
-            height: 10px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
+            height: 60px;
+            padding-top: 30px;
+            color: aliceblue;
+            font-size: 30px;
+            text-align: center;
         }
         
         .choose{
@@ -56,7 +58,7 @@
             margin: auto;
             width: 50%;
             justify-content: center;
-            border: none;
+            margin-bottom: 30px;
             height: 30px;
             padding-top: 8px;
         }
@@ -67,14 +69,33 @@
 
         #alt{
             background-color: #4caf50;
-            width: 50%;
+            border-radius: 10px;
+            justify-content: space-around;
+            box-shadow: 1px 1px 5px 5px rgb(226, 223, 223);
+            width: 34%;
+            margin-top: 300px;
             height: 100px;
-            justify-content: space-around;
             margin: auto;
-            justify-content: space-around;
             font-size: 40px;
             color: aliceblue;
             padding: 20px;
+            margin-top: 20%;
+        }
+
+        #bot{
+
+            width: 100%;
+            box-sizing: border-box;
+            border-top:  2px solid #4caf50 ;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            padding-bottom: 80px;
+        }
+
+        #bot>div{
+            margin: 5px;
         }
     </style>
 </head>
@@ -88,7 +109,7 @@
         
       
         <div id="signInBox">
-            <div id="topbar"></div>
+            <div id="topbar">PAYMENT</div>
 
             <form class="choose" action="">
 
@@ -102,12 +123,25 @@
                 <label for="">CARD NUMBER</label>
                 <input id="cardnum" type="text" placeholder="ENTER CARD NUMBER">
                 <label for="">CVV</label>
-                <input id="cvc"  type="text" placeholder="ENTER CVV">
+                <input id="cvv"  type="text" placeholder="ENTER CVV">
                 <label for="">EXP. DATE</label>
                 <input id="date" type="text" placeholder="ENTER EXP. DATE">
             </form>
 
             <button id="mkp">MAKE PAYMENT</button>
+
+            <div id="bot">
+                <div>
+                    <img src="	https://ddvql06zg3s2o.cloudfront.net/Assets/res/p/2920/imgs/payment/norton_secured.svg" alt="">
+                </div>
+                <div>
+                    <img src="https://ddvql06zg3s2o.cloudfront.net/Assets/res/p/2920/imgs/payment/satisfaction_guaranteed_en.svg" alt="">
+                </div>
+                <div>
+                    <img src="	https://ddvql06zg3s2o.cloudfront.net/Assets/res/p/2920/imgs/payment/satisfaction_guaranteed_en.svg" alt="">
+                </div>
+            </div>
+
         </div>
 </body>
 </html>
@@ -141,17 +175,17 @@
     }
     function makepay(){
         let cardnum = form.cardnum.value;
-        let cvc = form.cvc.value;
+        let cvv = form.cvv.value;
         let Date = form.date.value;
 
         if(btn.innerText== "MAKE PAYMENT"){
-            if(cardnum.length == 0 && cvc.length == 0 && Date.length == 0){
+            if(cardnum.length == 0 && cvv.length == 0 && Date.length == 0){
                 alert("Please fill the card detail")
             }
-            else if((Date.length != 7) && (cvc.length != 0)){
+            else if((Date.length != 7) && (cvv.length != 0)){
                 alert("Date Should be in 12/2021 formate")
             }
-            else if((cvc.length != 3) && (cardnum.length != 0)){
+            else if((cvv.length != 3) && (cardnum.length != 0)){
                 alert("CVC should be only 3 digit")
             }
             else if(cardnum.length != 14){
@@ -165,7 +199,7 @@
           div.textContent="PAYMENT SUCESSFUL"
 
         setInterval(function () {
-            alert('sdhbhf')        
+            window.location.href="homepage.html";
         },1000);
                 
         }
@@ -177,7 +211,7 @@
           div.textContent="PAYMENT SUCESSFUL"
 
         setInterval(function () {
-                alert('sdnf')
+            window.location.href="homepage.html";
         },1000);
         }else{
             alert("Chose the payment option")

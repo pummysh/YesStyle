@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+          display: flex;
+          width: 200%;
+        }
+        #signInBox{
+            width: 30%;
+            margin: auto;
+            height: 500px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px 5px rgb(226, 223, 223);
+        }
+        #headerMainLogo
+        {
+            width: 15%;
+            margin: auto;
+            margin-top: 1%;
+            margin-bottom: 1%;
+        }
+        #mainlogoImg{
+            width: 100%;
+        }
+        #topbar{
+            width: 100%;
+            margin: auto;
+            background-color: #4caf50;
+            height: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        
+        .choose{
+            margin: 30px;
+            width: 100%;
+        }
+
+        .enter{
+            width: 50%;
+            margin: 30px;
+        }
+        .enter>input{
+            width: 160%;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            height: 20px;
+        }
+        button{
+            display: flex;
+            margin: auto;
+            width: 50%;
+            justify-content: center;
+            border: none;
+            height: 30px;
+            padding-top: 8px;
+        }
+
+        button:hover{
+            background-color: #4caf50;
+        }
+
+        #alt{
+            background-color: #4caf50;
+            width: 50%;
+            height: 100px;
+            justify-content: space-around;
+            margin: auto;
+            justify-content: space-around;
+            font-size: 40px;
+            color: aliceblue;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+        <div id="headerMainLogo">
+            <img id="mainlogoImg"
+             src="https://ddvql06zg3s2o.cloudfront.net/Assets/res/p/2906/imgs/yesstyle_logo.svg" alt="">
+        </div>
+        
+      
+        <div id="signInBox">
+            <div id="topbar"></div>
+
+            <form class="choose" action="">
+
+                <input type="radio" onclick="cardpay()">
+                <label for="" id="card">CARD PAYMENT</label>
+                <input type="radio"  onclick="cod()">
+                <label for="" id="cod" >CASH ON DELIVERY</label>
+            </form>
+
+            <form class="enter" action="" id="form">
+                <label for="">CARD NUMBER</label>
+                <input id="cardnum" type="text" placeholder="ENTER CARD NUMBER">
+                <label for="">CVV</label>
+                <input id="cvc"  type="text" placeholder="ENTER CVV">
+                <label for="">EXP. DATE</label>
+                <input id="date" type="text" placeholder="ENTER EXP. DATE">
+            </form>
+
+            <button id="mkp">MAKE PAYMENT</button>
+        </div>
+</body>
+</html>
+
+<script>
+
+    let parent=document.body;
+
+    let btn=document.querySelector('#mkp');
+    btn.addEventListener("click",makepay);
+
+    function cardpay(){
+
+         let card = document.getElementById("card")
+        card.style.color = "brown"
+
+        let cod = document.getElementById("cod")
+        cod.style.color = "black"
+
+        btn.innerText = "MAKE PAYMENT"
+
+    }
+
+    function cod() {
+        let card = document.getElementById("card")
+        card.style.color = "black"
+
+        let cod = document.getElementById("cod")
+        cod.style.color = "brown"
+        btn.innerText = "ORDER"
+    }
+    function makepay(){
+        let cardnum = form.cardnum.value;
+        let cvc = form.cvc.value;
+        let Date = form.date.value;
+
+        if(btn.innerText== "MAKE PAYMENT"){
+            if(cardnum.length == 0 && cvc.length == 0 && Date.length == 0){
+                alert("Please fill the card detail")
+            }
+            else if((Date.length != 7) && (cvc.length != 0)){
+                alert("Date Should be in 12/2021 formate")
+            }
+            else if((cvc.length != 3) && (cardnum.length != 0)){
+                alert("CVC should be only 3 digit")
+            }
+            else if(cardnum.length != 14){
+                alert("Card no. should be only 14 digit")
+            }
+            else{
+                let div=document.createElement('div');
+          parent.innerText=null;
+          parent.append(div);
+          div.setAttribute("id","alt");
+          div.textContent="PAYMENT SUCESSFUL"
+
+        setInterval(function () {
+            alert('sdhbhf')        
+        },1000);
+                
+        }
+        }else if(btn.innerText== "ORDER"){
+          let div=document.createElement('div');
+          parent.innerText=null;
+          parent.append(div);
+          div.setAttribute("id","alt");
+          div.textContent="PAYMENT SUCESSFUL"
+
+        setInterval(function () {
+                alert('sdnf')
+        },1000);
+        }else{
+            alert("Chose the payment option")
+        }
+    }
+
+</script>

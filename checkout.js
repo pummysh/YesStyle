@@ -1,51 +1,52 @@
 let itemlist = document.getElementById("itemlist");
 
-// let cart_items = JSON.parse(localStorage.getItem('checkout'));
+let cart_items = JSON.parse(localStorage.getItem('cart_items'));
 
-let cart_items = [
-  {
-    price: 10,
-    name: "COSRX - Acne Pimple Master Patch",
-    quantity: 1,
-    img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
-  },
-  {
-    price: 10,
-    name: "COSRX - Acne Pimple Master Patch",
-    quantity: 1,
-    img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
-  },
-  {
-    price: 10,
-    name: "COSRX - Acne Pimple Master Patch",
-    quantity: 1,
-    img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
-  },
-  {
-    price: 10,
-    name: "COSRX - Acne Pimple Master Patch",
-    quantity: 1,
-    img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
-  },
-  {
-    price: 10,
-    name: "COSRX - Acne Pimple Master Patch",
-    quantity: 1,
-    img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
-  },
-  {
-    price: 10.0,
-    name: "COSRX - Acne Pimple Master Patch",
-    quantity: 1,
-    img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
-  },
-  {
-    price: 10,
-    name: "COSRX - Acne Pimple Master Patch",
-    quantity: 1,
-    img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
-  },
-];
+console.log(cart_items);
+// let cart_items = [
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10.0,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+// ];
 var total_items = 0;
 var sum_price = 0;
 cart_items.forEach(function (item) {
@@ -60,7 +61,7 @@ cart_items.forEach(function (item) {
   let line3 = document.createElement("p");
 
   qnt.textContent = item.quantity;
-  img.src = item.img;
+  img.src = item.image;
   head.textContent = "US$ " + item.price;
   line1.textContent = item.name;
   line2.textContent = item.quantity + "pc";
@@ -92,8 +93,8 @@ cart_items.forEach(function (item) {
 
   qnt.setAttribute("class", "qnt");
 
-  total_items += +item.quantity;
-  sum_price += +item.price;
+  total_items += item.quantity;
+  sum_price += item.price;
 });
 
 let span1 = document.getElementById("sp1");

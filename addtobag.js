@@ -1,13 +1,5 @@
-//  let show_item = JSON.parse(localStorage.getItem('show_product'));
-
-var show_item = [
-  {
-    name: "GOUB - High-Waist Straight Leg Jeans",
-    price: 10,
-    img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/78/149/M_p0154614978.jpg",
-    quantity: 1
-  }
-];
+ let show_item = JSON.parse(localStorage.getItem('showProducts'));
+console.log(show_item)
 
 let tag = document.getElementById("heading");
 let price = document.getElementById("price");
@@ -18,33 +10,36 @@ let listPrice = document.getElementById("listPrice");
 show_item.forEach(function (item) {
   tag.textContent = item.name;
   price.textContent = `US$ ${item.price}`;
-  img.src = item.img;
+  img.src = item.image;
   cover.append(img);
   listPrice.textContent = `US$ ${item.price * 1.2}`;
   img.setAttribute("id", "itemImg");
 });
 
+function addToCartNew(){
+  window.location.href = "cart.html";
+}
 let btn = document.getElementById("add");
 
 if (localStorage.getItem("cart_items") === null) {
   localStorage.setItem("cart_items", JSON.stringify([]));
 }
-
+if(localStorage.getItem("flagforlogin") == null) {
+  localStorage.setItem("flagforlogin",JSON.stringify([false]));
+}
+let flag_login = JSON.parse(localStorage.getItem("flagforlogin"));
+console.log(flag_login);
 btn.onclick = function () {
-  let cart = JSON.parse(localStorage.getItem("cart_items"));
-
-  cart.forEach(function (item) {
-    for (let i = 0; i < show_item.length; i++) {
-      if (show_item[i].name == item.name) {
-        cart.shift();
-        alert(`The Product is already added to the cart`);
-      }
-    }
-  });
-
+let cart = JSON.parse(localStorage.getItem("cart_items"));
+if(flag_login[0] === true) {
   cart.push(show_item[0]);
-
-  localStorage.setItem("cart_items", JSON.stringify(cart));
+  alert("Product is added to cart, go to the cart for further checkout");
+  // document.getElementById("cart_btn").style.background = "linear-gradient(to bottom right, #66CA59,#45D27D)";
+}
+else {
+  window.location.href = "sign_in.html";
+}
+localStorage.setItem("cart_items", JSON.stringify(cart));
 };
 
 var slide_items = [

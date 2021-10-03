@@ -75,7 +75,7 @@ body{
     font-style: inherit;
     vertical-align: middle;
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
-    /* border-width: 2px; */
+    border-width: 2px;
 }
 #right{
     height: 850px;
@@ -118,13 +118,12 @@ body{
     border-bottom: 2px solid rgba(0,0,0,0.12);
     transition: 1s;
     display: grid;
-    grid-gap: 2px;
 }
 
 .div{
     height: 85px;
     max-width: 95%;
-    padding: 8px;
+    padding: 16px 8px 8px 8px;
     display: inline-block;
 }
 .div1{
@@ -268,15 +267,10 @@ input{
 }
 #submit{
     height: 33px;
-    padding: 8px;
-    background-color: rgb(76,175,80);
-    color: white;
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+    padding: 5px;
 }
 #ip1{
     width: 65%;
-    padding: 5px;
-    border: 1px solid  grey;
 }
 
 

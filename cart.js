@@ -1,4 +1,5 @@
 var cart_items = JSON.parse(localStorage.getItem("cart_items"));
+console.log(cart_items);
 
 function displayCartDyn(cart_items){
 if(cart_items.length<1){
@@ -23,6 +24,9 @@ if(cart_items.length<1){
         defaultPara.textContent = "Your Shopping Bag is empty-"
         defaultPara.setAttribute("class","boxHeadings");
         var defaultBtn = document.createElement("button");
+        defaultBtn.onclick = function(){
+            window.location.href = "homepage.html";
+        }
         defaultBtn.textContent = "CONTINUE SHOPPING";
         cartBox.style.display = "block";
         defaultBtn.setAttribute("class","defaultButton");
@@ -169,11 +173,15 @@ else{
     var empHrTwo = document.createElement("hr");
     var btnContinue = document.createElement("button");
     btnContinue.textContent = "CONTINUE";
-    btnContinue.setAttribute("class","btnCheckout")
+    btnContinue.setAttribute("class","btnCheckout");
+    btnContinue.addEventListener("click",function() {
+        window.location.href = "checkout.html";
+    });
     thirdDivInWhite.append(summaryTxt,itemsTotalFlex,shipAndHandFlex,salesTaxFlex,empHrOne,estTotalFlex,empHrTwo,btnContinue);
     }
     
 }
+
 
 displayCartDyn(JSON.parse(localStorage.getItem("cart_items")));
 

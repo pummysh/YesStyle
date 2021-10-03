@@ -1,93 +1,139 @@
-let itemlist = document.getElementById('itemlist');
+let itemlist = document.getElementById("itemlist");
 
-let cart_items = [
-    {
-        price: 15,
-        name:'COSRX - Acne Pimple Master Patch',
-        quantity: 1,
-        img:"https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg"
-    },
-    {
-        price: 12,
-        name:'COSRX - Acne Pimple Master Patch',
-        quantity: 1,
-        img:"https://d1flfk77wl2xk4.cloudfront.net/Assets/86/973/M_p0131497386.jpg"
-    },
-    {
-        price: 15,
-        name:'COSRX - Acne Pimple Master Patch',
-        quantity: 1,
-        img:"https://d1flfk77wl2xk4.cloudfront.net/Assets/61/659/M_p0140965961.jpg"
-    },
-    {
-        price: 2,
-        name:'COSRX - Acne Pimple Master Patch',
-        quantity: 1,
-        img:"https://d1flfk77wl2xk4.cloudfront.net/Assets/89/815/M_p0155181589.jpg"
-    },
-    {
-        price: 3.53,
-        name:'COSRX - Acne Pimple Master Patch',
-        quantity: 1,
-        img:"https://d1flfk77wl2xk4.cloudfront.net/Assets/59/447/M_p0159344759.jpg"
-    }
-]
-let total_items = 0;
-let total_cost = 0;
-cart_items.forEach(function(item){
-    let div1 = document.createElement('div');
-    let div2 = document.createElement('div');
-    let div = document.createElement('div');
-    let qnt = document.createElement('div');
-    let img = document.createElement('img');
-    let head = document.createElement('h3');
-    let line1 = document.createElement('p');
-    let line2 = document.createElement('p');
-    let line3 = document.createElement('p');
-     
-    qnt.textContent = item.quantity;
-    img.src = item.img;
-    head.textContent = "US$ "+ item.price;
-    line1.textContent = item.name;
-    line2.textContent = item.quantity + "pc";
-    line3.textContent = "In-Stock - Usually ships within 24 hours";
+let cart_items = JSON.parse(localStorage.getItem('cart_items'));
 
-    div2.append(head, line1, line2, line3);
+console.log(cart_items);
+// let cart_items = [
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10.0,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+//   {
+//     price: 10,
+//     name: "COSRX - Acne Pimple Master Patch",
+//     quantity: 1,
+//     img: "https://d1flfk77wl2xk4.cloudfront.net/Assets/07/812/M_p0056481207.jpg",
+//   },
+// ];
+var total_items = 0;
+var sum_price = 0;
+cart_items.forEach(function (item) {
+  let div1 = document.createElement("div");
+  let div2 = document.createElement("div");
+  let div = document.createElement("div");
+  let qnt = document.createElement("div");
+  let img = document.createElement("img");
+  let head = document.createElement("h3");
+  let line1 = document.createElement("p");
+  let line2 = document.createElement("p");
+  let line3 = document.createElement("p");
 
-    div1.append(img);
+  qnt.textContent = item.quantity;
+  img.src = item.image;
+  head.textContent = "US$ " + item.price;
+  line1.textContent = item.name;
+  line2.textContent = item.quantity + "pc";
+  line3.textContent = "In-Stock - Usually ships within 24 hours";
 
-    div.append(div1, div2);
+  div2.append(head, line1, line2, line3);
 
-    itemlist.append(qnt, div);
+  div1.append(img);
 
-    div.setAttribute('class','div');
+  div.append(div1, div2);
 
-    div1.setAttribute('class','div1');
+  itemlist.append(qnt, div);
 
-    div2.setAttribute('class','div2');
+  div.setAttribute("class", "div");
 
-    img.setAttribute('class','img');
+  div1.setAttribute("class", "div1");
 
-    head.setAttribute('class','head');
+  div2.setAttribute("class", "div2");
 
-    line1.setAttribute('class','txt');
-  
-    line2.setAttribute('class','txt');
+  img.setAttribute("class", "img");
 
-    line3.setAttribute('class','txt');
+  head.setAttribute("class", "head");
 
-    qnt.setAttribute('class','qnt');
+  line1.setAttribute("class", "txt");
 
-    total_items += +(item.quantity);
-    total_cost += +(item.price)
-})
+  line2.setAttribute("class", "txt");
 
-let span1 = document.getElementById('sp1');
-let span2 = document.getElementById('sp2');
-let span4 = document.getElementById('sp4');
-let total = document.getElementById('total');
+  line3.setAttribute("class", "txt");
+
+  qnt.setAttribute("class", "qnt");
+
+  total_items += item.quantity;
+  sum_price += item.price;
+});
+
+let span1 = document.getElementById("sp1");
+let span2 = document.getElementById("sp2");
+let span4 = document.getElementById("sp4");
+
+var total_price = sum_price + 5;
+var total = document.getElementById("total");
 
 span1.textContent = `Items Total (${total_items} pcs)`;
-span2.textContent = `US$ ${total_cost}`;
+span2.textContent = `US$ ${sum_price.toFixed(2)}`;
 span4.textContent = `US$ 05.00`;
-total.textContent = `US$ ${total_cost + 05}`;
+total.textContent = `US$ ${total_price.toFixed(2)}`;
+
+let redirect = document.getElementById("direct");
+
+redirect.onclick = function () {
+  window.location.href = "pay.html";
+};
+
+var submit = document.getElementById("submit");
+
+var coupon = document.getElementById("ip1").value;
+
+submit.addEventListener("click", applyCode);
+
+var count = 1;
+function applyCode(e) {
+  e.preventDefault();
+
+  if (count == 1) {
+    if (document.getElementById("ip1").value == "masai30") {
+      total_price = total_price - 0.3 * total_price;
+      total.textContent = `US$ ${total_price.toFixed(2)}`;
+      alert("Congratulations You have Won 30% OFF On Coupon Code");
+    } else if (coupon != "masai30") {
+      alert("Sorry You Are Not Eligible For Rewards!");
+    }
+    count++;
+    document.getElementById("ip1").value = "";
+  }
+}

@@ -22,7 +22,7 @@
     <div id="bottomContainer">
         <div id="left">
             <h3>CHECKOUT OPTIONS</h3>
-            <button>CONTINUE YESSTYLE CHECKOUT</button>
+            <button id="direct">CONTINUE YESSTYLE CHECKOUT</button>
             <p class="copyright">
                 Copyright © 2006-2021 YESSTYLE.COM LTD. All rights reserved. <br>
                 <a class="anchor" href="https://www.yesstyle.com/rest/help/v1/helptopic/1741">Terms Of Use</a>
@@ -48,9 +48,15 @@
             <div id="coupon">
                 <a href="https://www.yesstyle.com/en/shopping-bag.html">Have a Coupon or Rewards Code?</a>
                 <span><img src="https://cdn-user-icons.flaticon.com/53600/53600598/1632914774874.svg?token=exp=1632920674~hmac=f33e3db1c87e51a49a0bfa71a717f690" alt=""></span>
+                 
+                <div style="display: flex; width: 100%; height: 40px;align-items: center;"><form action="" style="width: 100%;" onsubmit="applyCode(event)"> 
+                    <input type="text"  id="ip1" placeholder="ENTER COUPON CODE" required>
+                    <input type="submit"  id="submit" value="Apply Code">
+                </form></div>
             </div>
+
             <div id="orderSum">
-                <h3>ORDER SUMMARY</h3>
+                <h3 style="margin-top: 50px;">ORDER SUMMARY</h3>
                 <div id="box">
                 <div id="sp1" class="txtleft"></div>
                 <div id="sp2" class="txtright"></div>

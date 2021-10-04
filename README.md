@@ -4,12 +4,12 @@
 <H3>SIGN IN </H3>
 
 
-![sign in] (https://via.placeholder.com/250)
-
+<img src="https://via.placeholder.com/250", width=800/>
 
 <H3>Landing Page</H3>
 
-![sign in] (https://via.placeholder.com/250)
+
+<img src="https://via.placeholder.com/250", width=800/>
 
 <H3>Drop Down Box in Landing Page Using raw css and html</H3>
 

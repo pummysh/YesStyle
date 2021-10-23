@@ -397,3 +397,46 @@ header{
     color: white;
     font-weight: bold;
 }
+
+/* Media part */
+@media (min-width:250px) and (max-width:820px){
+    
+    .lowerHalfInNav{
+        display: none;
+        border: 2px solid black;
+    }
+    /* .itemsInCartItemsData{
+        height: auto;
+        border: 2px solid black;
+    } */
+    #fir_hr{
+        display: none;
+    }
+    .itemsInCartItemsData{
+        height: auto;
+    }
+    /* .checkOutBox{
+        height: auto;
+        overflow: scroll;
+    } */
+    .contentInCheckBox{
+        height: auto;
+    }
+    /* .whiteContInCheckout{
+        width: 300px;
+    } */
+    #cartContent{
+        grid-template-columns: 45% 50%;
+        gap: 5%;
+    }
+    .marginLeftDouble img{
+        width: 30px;
+    }
+    .thirdDiv{
+        height: auto;
+    }
+    .productsHolder div{
+        height: auto;
+        overflow: hidden;
+    }
+}

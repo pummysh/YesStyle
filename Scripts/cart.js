@@ -92,12 +92,12 @@ else{
     secDivCartData.append(whiteDivInCheckout);
     textCheckout.setAttribute("class","checkoutTxt");
     var firstDivInWhite = document.createElement("div");
-    firstDivInWhite.setAttribute("class","firstDivInWhiteBox");
+    firstDivInWhite.setAttribute("class","firstDivInWhiteBox contentInCheckBox");
     whiteDivInCheckout.append(firstDivInWhite);
     var secondDivInWhite = document.createElement("div");
-    secondDivInWhite.setAttribute("class","secondDivInWhiteBox");
+    secondDivInWhite.setAttribute("class","secondDivInWhiteBox contentInCheckBox");
     var thirdDivInWhite = document.createElement("div");
-    thirdDivInWhite.setAttribute("class","thirdDivInWhiteBox");
+    thirdDivInWhite.setAttribute("class","thirdDivInWhiteBox contentInCheckBox");
     whiteDivInCheckout.append(firstDivInWhite,secondDivInWhite,thirdDivInWhite);
     // for first div in white box
     var deliverToUnitedStatesTxt = document.createElement("h4");

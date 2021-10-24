@@ -60,7 +60,7 @@ This project is a part of our build week in coding bootcamp name ***masai school
 
 <p style="color:purple">And, once when user enters the details it will show payment successful</p></p>
 
-<img style="border:2px solid black" src="images/chek.PNG">
+<img style="border:2px solid black" src="images/pay.PNG">
 
 <h4>Contributors</h4>
 

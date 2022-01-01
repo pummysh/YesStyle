@@ -52,7 +52,7 @@ var newArr_whatshot_pants_data = [
 function showReccomData(recData) {
     var recommendedBox = document.getElementById("recommendedBox");
     recommendedBox.onclick = function () {
-        window.location.href = "addtobag.html";
+        window.location.href = "./HTML/addtobag.html";
     }
     recData.forEach(function (el) {
         var boxes = document.createElement("div");
@@ -265,7 +265,7 @@ function showFleshSaleUnderThreeData(fleshSalesData) {
         var divContainer = document.createElement("div");
         divContainer.setAttribute("class", "productsDivInsideFleshSales");
         divContainer.onclick = function () {
-            window.location.href = "addtobag.html";
+            window.location.href = "./HTML/addtobag.html";
         }
         var image = document.createElement("img");
         image.src = el.image;
@@ -376,7 +376,7 @@ function showFleshSalesUpto25Data(fleshSalesData) {
         var divContainer = document.createElement("div");
         divContainer.setAttribute("class", "productsDivInsideFleshSales");
         divContainer.onclick = function () {
-            window.location.href = "addtobag.html";
+            window.location.href = "./HTML/addtobag.html";
         }
         var image = document.createElement("img");
         image.src = el.image;
@@ -456,7 +456,7 @@ function showFleshSalesStockClearance(fleshSalesData) {
         var divContainer = document.createElement("div");
         divContainer.setAttribute("class", "productsDivInsideFleshSales");
         divContainer.onclick = function () {
-            window.location.href = "addtobag.html";
+            window.location.href = "./HTML/addtobag.html";
         }
         var image = document.createElement("img");
         image.src = el.image;

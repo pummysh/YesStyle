@@ -39,7 +39,7 @@ let parent=document.body;
           div.setAttribute("id","alt");
           div.textContent="PAYMENT SUCESSFUL"
         setInterval(function () {
-            window.location.href="homepage.html";
+            window.location.href="../index.html";
         },1000);
         }
         }else if(btn.innerText== "ORDER"){
@@ -49,7 +49,7 @@ let parent=document.body;
           div.setAttribute("id","alt");
           div.textContent="PAYMENT SUCESSFUL"
         setInterval(function () {
-            window.location.href="homepage.html";
+            window.location.href="../index.html";
         },1000);
         }else{
             alert("Chose the payment option")
